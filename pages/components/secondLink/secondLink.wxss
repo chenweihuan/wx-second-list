@@ -1,0 +1,65 @@
+/* pages/components/secondLink/secondLink.wxss */
+/*行业选择  */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.4;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.commodity_attr_box {
+  width: 100%;
+  /* height: 70%; */
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  /* padding-top: 20rpx; */
+}
+.choose-tip{
+  text-align: center;
+  font-size: 32rpx;
+  color: #a08250;
+  line-height: 70rpx;
+  border-bottom: 1rpx solid #e7e7e7;
+}
+.scroll{
+  display: flex;
+}
+.scroll-view-item{
+  text-align: center;
+  /* line-height: 100rpx; */
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 34rpx;
+  padding:26rpx 16rpx;
+}
+.scroll .scroll-view:first-child{
+  width: 40%;
+}
+.scroll .scroll-view:first-child .scroll-view-item{
+  background-color: #f2f2f2;
+}
+.scroll-view-item{
+  border-bottom: 1rpx solid #e1e1e1;
+  /* border-right:1rpx solid #e1e1e1; */
+}
+.scroll .scroll-view:last-child{
+  width: 60%;
+}
+.scroll .scroll-view:first-child .scroll-active{
+  background-color: #fff;
+}
+.profession-center{
+  width: 70%;
+}
+.profession-right{
+  padding-right: 0;
+}
