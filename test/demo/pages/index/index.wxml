@@ -1,0 +1,7 @@
+<view class="container">
+  <view>
+    <button bindtap="showSecond">弹出行业选择</button>
+  </view>
+  <view>{{profession}}</view>
+  <secondList id="second" bind:chooseEvent = "chooseItem"></secondList>  
+</view>

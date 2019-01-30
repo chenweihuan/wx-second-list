@@ -1,15 +1,14 @@
-<!--pages/components/secondLink/secondLink.wxml-->
-  <!--行业选择  -->
-  <view class="commodity_screen" catchtap="_hideEvent" wx:if="{{showModalStatus}}"></view>
+<!--行业选择  -->
+<view class="commodity_screen" catchtap="hideSecond" wx:if="{{showModalStatus}}"></view>
   <view class="commodity_attr_box" animation="{{animationData}}" wx:if="{{showModalStatus}}" style='height:70%;'>
       <!--确定按钮  -->
-      <view class='choose-tip' style='height:10%;'>请选择所属行业</view>
+      <view class='choose-tip' style='height:10%;'>{{topText}}</view>
       <view class='scroll' style='height:90%;'>
           <scroll-view scroll-y  class='scroll-view' style='height:100%;'>
             <view wx:for="{{list}}" wx:key="{{item.left}}" class="scroll-view-item {{currentTab==index?'scroll-active':''}}" data-current="{{index}}" catchtap='_swichNav'>{{item.left}}</view>
           </scroll-view>
           <scroll-view scroll-y class='scroll-view' style='height:100%;'>
-            <view  class="scroll-view-item " wx:for="{{list[currentTab].right}}" wx:key="{{*this}}" data-current='{{index}}' catchtap='_chooseEvent'>{{item}}</view>
+            <view  class="scroll-view-item" wx:for="{{list[currentTab].right}}" wx:key="{{index}}" data-current='{{index}}' catchtap='_chooseEvent'>{{item}}</view>
           </scroll-view>
       </view>
   </view>

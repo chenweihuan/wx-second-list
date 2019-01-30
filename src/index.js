@@ -1,17 +1,9 @@
-// pages/components/secondLink/secondLink.js
 Component({
-  options: {
-    multipleSlots: true // 在组件定义时的选项中启用多slot支持
-  },
-  /**
-   * 组件的属性列表
-   */
   properties: {
-    list: { // 属性名
-      type: Array,     // 类型（必填），目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型）
+    list: { 
+      type: Array, 
       value: [
         {
-          "id": 1,
           "left": "计算机/互联网/通信/电子",
           "right": [
             "计算机软件",
@@ -26,7 +18,6 @@ Component({
           ]
         },
         {
-          "id": 2,
           "left": "会计/金融/银行/保险",
           "right": [
             "会计/审计",
@@ -37,7 +28,6 @@ Component({
           ]
         },
         {
-          "id": 3,
           "left": "贸易/消费/制造/营运",
           "right": [
             "贸易/进出口",
@@ -52,7 +42,6 @@ Component({
           ]
         },
         {
-          "id": 4,
           "left": "制药/医疗",
           "right": [
             "制药/生物工程",
@@ -61,7 +50,6 @@ Component({
           ]
         },
         {
-          "id": 5,
           "left": "广告/媒体",
           "right": [
             "广告",
@@ -72,7 +60,6 @@ Component({
           ]
         },
         {
-          "id": 6,
           "left": "房地产/建筑",
           "right": [
             "房地产",
@@ -82,7 +69,6 @@ Component({
           ]
         },
         {
-          "id": 7,
           "left": "专业服务/教育/培训",
           "right": [
             "中介服务",
@@ -96,7 +82,6 @@ Component({
           ]
         },
         {
-          "id": 8,
           "left": "服务业",
           "right": [
             "餐饮业",
@@ -107,7 +92,6 @@ Component({
           ]
         },
         {
-          "id": 9,
           "left": "物流/运输",
           "right": [
             "交通/运输/物流",
@@ -115,7 +99,6 @@ Component({
           ]
         },
         {
-          "id": 10,
           "left": "能源/原材料",
           "right": [
             "石油/化工/矿产/地质",
@@ -126,7 +109,6 @@ Component({
           ]
         },
         {
-          "id": 11,
           "left": "政府/非营利组织/其他",
           "right": [
             "政府/公共事业",
@@ -136,31 +118,21 @@ Component({
             "多元化业务集团公司"
           ]
         }
-      ], // 属性初始值（可选），如果未指定则会根据类型选择一个
-      observer: function (newVal, oldVal) { } // 属性被改变时执行的函数（可选），也可以写成在methods段中定义的方法名字符串, 如：'_propertyChange'
+      ]
+    },
+    topText:{
+      type:String,
+      value:"请选择所属行业"
     }
   },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
     showModalStatus: false,
     currentTab:0,
     animationData:""
   },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
    // 隐藏弹窗
-    hideSecond() {
-      this.setData({
-        showModalStatus: false
-      })
-    },
-
+    hideSecond() { this.setData({ showModalStatus: false }) },
     //展示弹窗
     showSecond() {
       var animation = wx.createAnimation({
@@ -181,16 +153,9 @@ Component({
         })
       }.bind(this), 200)
     },
-
     // 内部方法建议以下划线开头
-    _hideEvent(){
-      this.triggerEvent("hideEvent")
-    },
     _swichNav(e){
-      this.setData({
-        currentTab: e.currentTarget.dataset.current
-      })
-      this.triggerEvent("swichEvent")
+      this.setData({ currentTab: e.currentTarget.dataset.current })
     },
     _chooseEvent(e){
       this.hideSecond();

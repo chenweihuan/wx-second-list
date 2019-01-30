@@ -1,0 +1,22 @@
+{
+  "name": "wx-second-list",
+  "version": "0.0.2",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "weiwei",
+  "license": "ISC",
+  "miniprogram":"src",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chenweihuan/secondList.git"
+  },
+  "keywords": [
+    "wx-second-list"
+  ],
+  "bugs": {
+    "url": "https://github.com/chenweihuan/secondList/issues"
+  }
+}
